@@ -82,6 +82,30 @@ Below is the simplified flow:
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/4034abc0-e980-45f7-b491-2f6602d27768)
 
+### OpenLANE and Strive Chipsets :  
+OpenLane is an open-source Very Large Scale Integration (VLSI) flow that is designed to be highly configurable and easy to use for digital synthesis and backend flow. It is built around open-source tools and is a collection of scripts
+that run these tools in the right order, transforming their inputs and outputs as appropriate, and organizing the results. OpenLane, along with the 130nm Process Design Kit (PDK), is part of a recent effort by various industry players 
+to democratize Application-Specific Integrated Circuit (ASIC) design.  
+
+On the other hand, Strive chipsets are a family of RISC-V System on Chips (SoCs) designed using the SkyWater 130nm process. RISC-V is an open standard instruction set architecture (ISA) based on established reduced instruction set 
+computer (RISC) principles.  
+
+Below shown StriVe SOC Family features:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/7e287129-fbbf-453c-9110-aa36ab073570)
+
+Below is the OpenLANE ASIC flow :  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/9a9967c1-15f8-40b8-81fa-f02925bb8155)
+
+**Antenna Rules Violations** : Antenna rules violations occur when certain parts of a semiconductor device, typically thin gate oxide regions (such as in MOS transistors), accumulate a significant charge during the manufacturing process. This charge can become trapped and cause unintended behavior in the circuit, such as latch-up (an undesirable state where the device draws excessive current) or other reliability problems.
+
+**Cause** : Antenna rules violations are usually a result of the manufacturing process steps, like photolithography and etching, where charge accumulates on certain parts of the chip's surface due to the exposure to radiation or plasma. When the chip is later powered up, this trapped charge can cause issues.  
+
+Below are the solutions:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/c3cc3f25-b129-4a93-925a-510773217976)
+
 
 
 
