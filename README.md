@@ -43,6 +43,46 @@ Below is shown the representation :
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/c70e58e7-5f68-477f-ac9c-8b117e34f8f3)
 
+## SoC Design and OpenLANE
+
+SoC (System-on-Chip) design using OpenLane refers to the process of creating complex integrated circuits that contain multiple components, including processors, memory, and various peripherals, using the OpenLane open-source digital ASIC (Application-Specific Integrated Circuit) design flow  
+
+1. **System-on-Chip (SOC) Design** : SOC design involves integrating various components, such as CPUs, GPUs, memory, and interfaces, onto a single chip. This approach offers advantages in terms of size, power efficiency, and performance for a wide range of applications, from smartphones to IoT devices.
+2. **OpenLane** : OpenLane is an open-source ASIC design flow developed by the Google-sponsored Skywater PDK (Process Design Kit) team. It provides a comprehensive set of tools and scripts that enable engineers and designers to automate the entire SOC design process, from RTL (Register-Transfer Level) design to GDSII (Graphic Data System II) tapeout.
+3. **Skywater PDK**: OpenLane is compatible with the Skywater PDK, which provides the process-specific information and design rules needed for a specific semiconductor manufacturing process. The Skywater PDK is also open-source and maintained by Skywater Technology Foundry.
+4. **Community Support**:  OpenLane has an active and growing community of users and contributors who share knowledge and collaborate on improving the toolchain. This collaborative effort helps enhance the capabilities and reliability of the platform.
+
+Below is the OpenLANE Flow:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/b34a5d04-88e4-4d33-b890-70cf6ce55291)  
+
+Below is the simplified flow:  
+
+1. **RTL Design (Register-Transfer Level)**: At this stage, engineers create a high-level description of the desired chip's functionality using a hardware description language like VHDL or Verilog. This description defines how data moves between registers and logic gates in the chip.
+
+2. **Synthesis**: The RTL code is synthesized into a gate-level representation. This step transforms the high-level description into a netlist of logic gates that can be implemented in silicon. Optimization techniques are applied to improve performance, power consumption, and area usage.
+
+3. **Floorplanning**: Engineers create a layout plan, or floorplan, that specifies where different functional blocks will be placed on the chip. This step considers factors like power distribution and signal routing.
+
+4. **Placement** : The synthesized gates are physically placed on the chip according to the floorplan. This step aims to minimize the physical distance between related gates to improve performance.
+
+5. **Routing**: Wires are connected between the gates to establish the logical connections defined in the RTL code. This step involves complex algorithms to optimize for speed, power, and area.
+
+6. **Physical Verification** : The design is thoroughly checked for issues like timing violations, manufacturing defects, and design rule violations. Tools ensure that the chip will function correctly and be manufacturable.
+
+7. **Mask Generation**: The final layout, or mask, is generated based on the design. This mask provides a blueprint for the semiconductor fabrication process.
+
+8. **Manufacturing**: The mask is used to manufacture the physical semiconductor wafer in a semiconductor fabrication facility (fab). This involves a series of intricate processes, including photolithography, etching, and doping, to create the actual chip.
+
+9. **Testing**: After fabrication, each chip is rigorously tested to identify defects and ensure functionality.
+
+10. **Packaging**: The individual chips are packaged into protective casings that include pins or connectors for interfacing with other electronic components.
+
+11. **GDS2 Format**: GDS2 is a file format used to represent the final chip layout and mask data. It contains information about the physical layout of the chip, including the positions of gates, wires, and other elements.
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/4034abc0-e980-45f7-b491-2f6602d27768)
+
+
 
 
 ## References
