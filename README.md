@@ -1,16 +1,17 @@
 # Advanced_Physical_Design_Using_OpenLANE
 
 ## Table of Contents
-1.  [How to talk to computers ](#how-to-talk-to-computers)
-2.  [Introduction to RISCV ](#introduction-to-RISCV--)
-3.  [From Software Applications to Hardware](#from-software-applications-to-hardware--)
+1. Day 1
+-  [How to talk to computers ](#how-to-talk-to-computers)
+- [Introduction to RISCV ](#introduction-to-RISCV--)
+-    [From Software Applications to Hardware](#from-software-applications-to-hardware--)
 
 
 
 # Day_1 :Inception of open-source EDA, OpenLANE and Sky130 PDK  
 
 ## How to talk to computers 
-## [Introduction](#introduction--)  :
+## Introduction  :
 
 A QFN-48 package is a type of integrated circuit (IC) package that contains a semiconductor chip (or die) at its core. The package has 48 pins or pads on its exterior, which are used for connecting the chip to other components on a circuit board. Inside the package, the core houses the chip (die) and may include additional features like thermal pads or ground connections, known as integrated passive components (IPs), to enhance the performance and thermal management of the IC.  
 
