@@ -5,6 +5,7 @@
 -  [How to talk to computers ](#how-to-talk-to-computers)
 - [Introduction to RISCV ](#introduction-to-RISCV--)
 -    [From Software Applications to Hardware](#from-software-applications-to-hardware--)
+-    [SoC Design And OpenLANE](##soc-design-and-openlane)
 
 **2. Day 2**
 - [Good and Bad Floorplanning , Placement and library cells](#day-2--good-and-bad-floorplanning--placement-and-library-cells)
