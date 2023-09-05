@@ -1,13 +1,13 @@
 # Advanced_Physical_Design_Using_OpenLANE
 
 ## Table of Contents
-1. Day 1
+**1. Day 1**
 -  [How to talk to computers ](#how-to-talk-to-computers)
 - [Introduction to RISCV ](#introduction-to-RISCV--)
 -    [From Software Applications to Hardware](#from-software-applications-to-hardware--)
 
-2. Day 2
-- [Good and Bad Floorplanning , Placement and library cells](#Good-and-Bad-Floorplanning-Placement-and-library-cells)
+**2. Day 2**
+- [Good and Bad Floorplanning , Placement and library cells](#Good-and-Bad-Floorplanning , Placement-and-library-cells)
 
 
 
