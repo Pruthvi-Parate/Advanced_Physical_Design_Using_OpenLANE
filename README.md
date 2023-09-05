@@ -6,6 +6,9 @@
 - [Introduction to RISCV ](#introduction-to-RISCV--)
 -    [From Software Applications to Hardware](#from-software-applications-to-hardware--)
 
+2. Day 2
+- [Good and Bad Floorplanning , Placement and library cells](#Good-and-Bad-Floorplanning-Placement-and-library-cells)
+
 
 
 # Day_1 :Inception of open-source EDA, OpenLANE and Sky130 PDK  
@@ -153,6 +156,27 @@ cd OpenLane
 make
 make test
 ```
+
+Below shown the installation done : 
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/73a56577-19d8-42c4-9e70-6271a8d67c0b)
+
+Now we will do run_synthesis :  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/e521c68b-fdc9-4950-918b-50a6b9b7a26d)
+
+Below is dff_synthesis report:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/686d8a71-a016-4b77-83b2-2b3625f4cf91)
+
+Below is synthesis_pre report:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/f73e82ad-a3bd-4a95-aa71-8542b4f47ebd)
+
+
+# DAY 2 : Good and Bad Floorplanning , Placement and library cells
+
+
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
