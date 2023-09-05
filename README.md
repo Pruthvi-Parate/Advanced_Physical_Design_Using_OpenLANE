@@ -7,7 +7,7 @@
 -    [From Software Applications to Hardware](#from-software-applications-to-hardware--)
 
 **2. Day 2**
-- [Good and Bad Floorplanning , Placement and library cells](#Good-and-Bad-Floorplanning , Placement-and-library-cells)
+- [Good and Bad Floorplanning , Placement and library cells](#Good-and-Bad-Floorplanning,-Placement-and-library-cells)
 
 
 
