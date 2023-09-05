@@ -6,8 +6,8 @@
 - [Introduction to RISCV ](#introduction-to-RISCV--)
 -    [From Software Applications to Hardware](#from-software-applications-to-hardware--)
 
-**2. [Day 2](#day-2)**
-- [Good and Bad Floorplanning , Placement and library cells](#Good-and-Bad-Floorplanning-,-Placement-and-library-cells)
+**2. Day 2**
+- [Good and Bad Floorplanning , Placement and library cells](#day-2--good-and-bad-floorplanning--placement-and-library-cells)
 
 
 
