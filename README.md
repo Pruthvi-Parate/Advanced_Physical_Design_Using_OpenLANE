@@ -235,6 +235,21 @@ The netlist specifies how the logic gates within the chip are interconnected. It
 After the I/O pad positions are determined, the design process includes logical placement blocking of pre-placed macros. This step involves arranging pre-placed macros (blocks of predefined logic) in a way that distinguishes them from the area reserved for the I/O pins. This separation ensures that the macros do not interfere with the connectivity and signal paths associated with the pins.  
 
 ### FLoorplan using OpenLANE
+To run the picorv32a floorplan in openLANE:
+```
+run_floorplan
+```
+
+To view the floorplan, Magic is invoked after moving to the results/floorplan directory:
+```
+magic  /home/pruthvi/.volare/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.min.lef def read picorv32a.def 
+```
+
+Below is the representation:  
+
+![Screenshot 2023-09-07 201916](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/1b601780-1297-470e-9886-b57f32326c22)
+
+![Screenshot 2023-09-07 202014](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/5342f33b-d5a0-4333-8cf3-9f54289bbda0)
 
 
 
