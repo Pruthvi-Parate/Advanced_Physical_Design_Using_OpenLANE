@@ -178,6 +178,25 @@ Below is synthesis_pre report:
 
 # DAY 2 : Good and Bad Floorplanning , Placement and library cells
 
+## Chip floorplanning consideration
+### Utilization factor and aspect ratio:  
+
+### Core:
+**The width** of the core typically refers to the physical size or dimensions of the central processing unit (CPU) or processor core within a microchip. It is usually measured in nanometers (nm) or micrometers (µm). For example, you might hear about a "14nm core" or a "7nm core," indicating the feature size of the core's transistors.  
+**The height** of the core is not commonly referred to in the same way as the width. Instead, the core's size is usually described in terms of its area, which is determined by multiplying its width and height.  
+
+### Die  (also known as the chip or silicon die):
+ **The width** of the die is typically the physical measurement of the semiconductor wafer after all the individual ICs (integrated circuits) have been fabricated on it but before they are cut apart. Die widths can vary significantly depending on the specific manufacturing process and the design of the chips being produced. They can range from a few millimeters to several centimeters or more.  
+
+ Similar to the core, **the height** of the die is not a common parameter of discussion. Instead, the die's size is often described in terms of its area, which is the product of its width and height.
+
+Below is the representation : 
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/f8d3ab82-2bff-41f7-b9b7-a9d93cc291a9)
+
+Below shown the utilization factor:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/f38d85a1-6629-455e-9a8f-7d66b8e900c5)
 
 
 ## References
