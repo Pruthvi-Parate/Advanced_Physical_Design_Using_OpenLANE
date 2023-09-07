@@ -198,6 +198,32 @@ Below shown the utilization factor:
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/f38d85a1-6629-455e-9a8f-7d66b8e900c5)
 
+### Preplaced Cells:
+Pre-placed cells, often referred to as "pre-placed blocks" or "pre-placed logic cells," are a concept used in digital integrated circuit design. They are a specific type of logic cell or block that is manually placed by a designer in a fixed position on the semiconductor die or chip during the design process. These cells serve various purposes and provide several advantages in the chip design process.    
+
+Unlike standard cells in a digital design, which are typically placed automatically by place-and-route tools, pre-placed cells are manually positioned by the designer. The designer selects specific locations on the chip for these cells based on design considerations, performance requirements, or other constraints.  
+
+Pre-placed cells are often used for critical components of a design, such as memory blocks, analog modules, or specialized digital circuits that need to be precisely located to meet performance, power, or area constraints. Placing them manually ensures that they are in the optimal positions for meeting these requirements.  
+
+In large and complex chip designs, pre-placed cells can be used to create a hierarchical structure, where certain functional blocks or subsystems are pre-placed and interconnected. This approach simplifies the overall design process and allows for better management of the design's complexity.   
+
+Below is the more detailed representation:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/1721de55-1098-4791-a570-81727ed0f400)
+
+### Decoupling capacitor:  
+ Decoupling capacitors are essential components in electronic circuit design that help maintain a stable power supply, filter out noise, and improve the overall performance and reliability of electronic systems, particularly in digital and mixed-signal applications. Proper selection, placement, and sizing of decoupling capacitors are critical for their effectiveness in reducing noise and maintaining voltage stability.  
+
+ ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/b9bb119f-d746-4505-b0dc-5c4bcf7208ea)
+
+
+**Noise margin** is a concept used in digital electronics and integrated circuit (IC) design to quantify the tolerance of a digital signal to noise and voltage variations. It provides a measure of the robustness of a digital circuit by defining the range of acceptable voltage levels for logic values (0 and 1) and ensuring that signals can be reliably interpreted in the presence of noise. Noise margin is typically expressed in terms of voltage or voltage range.
+
+Below is representation:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/a85440af-c92b-4df9-beaf-0971f0308ca9)
+
+
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
