@@ -10,6 +10,7 @@
 
 **2. Day 2**
 - [Good and Bad Floorplanning , Placement and library cells](#day-2--good-and-bad-floorplanning--placement-and-library-cells)
+- [Chip floorplanning consideration](#chip-floorplanning-consideration)
 
 
 
