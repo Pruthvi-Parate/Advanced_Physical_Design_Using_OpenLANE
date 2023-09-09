@@ -305,6 +305,43 @@ Below is the representation of cell design flow
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/d9b0c205-02eb-4517-932b-9342274a604e)
 
+**Cell design flow**, also known as standard cell design flow, is the process of creating and optimizing standard cell libraries used in digital integrated circuit design. These libraries contain fundamental building blocks, such as logic gates and flip-flops, that are used to design complex digital circuits.
+
+1. **Specification and Requirements**:
+Begin by defining the specifications and requirements for the standard cell library. This includes factors like technology node, voltage levels, speed requirements, and power constraints.
+
+2.**Cell Architecture Selection**: Choose the architecture and topology for the standard cells. This involves deciding on the logical functions each cell will implement and the number of input and output pins.
+
+3. **Schematic Design**: Create schematic designs for each standard cell. This involves designing the logical function of the cell using gates and interconnections. Tools like schematic capture software are used for this step.
+
+4. **Simulation and Verification**:
+Simulate the designed cells to verify that they meet the specified functionality and timing requirements. This step may include functional simulation, static timing analysis (STA), and power analysis.
+
+5. **Layout Design**:
+Create physical layouts for the cells based on the schematic designs. This involves specifying the dimensions, placement of transistors, and routing of metal layers.
+
+6.**DRC and LVS Check**s:
+Perform Design Rule Check (DRC) and Layout vs. Schematic (LVS) checks to ensure that the layout adheres to the manufacturing rules and is consistent with the schematic.
+
+7.**Extraction and Characterization**:
+Extract parasitic components from the layout, including resistances and capacitances. These parasitics impact the timing and power characteristics of the cells.
+Characterize the cells by measuring their performance under various conditions, such as different input vectors and operating voltages.
+
+8.**Timing Analysis**: Conduct detailed timing analysis to determine parameters like propagation delay, setup time, hold time, and clock-to-q delay for flip-flops.  
+
+9.**Library Validation**:
+Validate the entire standard cell library by using it in test chip or design test cases to ensure that it meets performance and functionality requirements.
+
+Below is the flow:  
+
+![cellflow](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/7367738e-b8a8-45c1-a807-510dc8decc58)
+
+Below shown the different functionality of different size of library that consists of gates dffs and latches.
+
+![flow2](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/3bf02762-0122-4b5d-9c58-745e05c5c90a)
+
+![flow3](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/ee3e78d5-09f3-44e0-95ac-85b0fe46420e)
+
 
 
 ## References
