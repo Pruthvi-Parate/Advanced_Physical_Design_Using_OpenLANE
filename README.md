@@ -173,6 +173,11 @@ Now we will do run_synthesis :
 
 Below is dff_synthesis report:  
 
+![synthrpt](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/c4d04351-021f-4c56-9327-c88d52a8cd8f)
+
+![synthrpt2](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/ac2cc982-f792-4251-9b1b-b337f8bdba4b)
+
+
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/686d8a71-a016-4b77-83b2-2b3625f4cf91)
 
 Below is synthesis_pre report:  
@@ -251,8 +256,32 @@ Below is the representation:
 
 ![Screenshot 2023-09-07 202014](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/5342f33b-d5a0-4333-8cf3-9f54289bbda0)
 
+## Initial Place Design
 
+Here below shown **Optimize Placement Using Estimated Wire Length And Capacitance** representation : 
 
+![optimizeplace](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/25f8acdf-7917-4646-8757-01d681b9bf2b)
+
+Here above we have to connect Din1 to Dout1 so there are FFs and wire shown .  
+Optimizing placement in integrated circuit design involves arranging the components on a chip to achieve specific goals. Two important factors in this optimization are wire length (the length of connections between components) and capacitance (which affects power and timing).
+
+**Library characterization** is the process of characterizing electronic components and gates, such as logic gates, flip-flops, and other building blocks, to create models that accurately represent their behavior under various conditions. This characterization provides information about how components respond to different inputs, delays, power consumption, and more.  
+
+**Library modeling** involves creating mathematical or algorithmic representations of the behavior and characteristics of components. These models are used by EDA tools to simulate, analyze, and optimize digital circuits during the design phase. 
+
+Here below is the representation of the flow:  
+
+![optflow](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/9a01cb34-6a44-4519-b355-a3c707d84b9b)
+
+**Logic synthesis** is a crucial step in the design of digital integrated circuits (ICs) and plays a central role in transforming a high-level hardware description into a gate-level representation that can be fabricated in silicon.  
+
+**Floorplan** is one the critical & important step in Physical design. Quality of your Chip / Design implementation depends on how good is the Floorplan. A good floorplan can be make implementation process (place, cts, route & timing closure) cake walk. On similar lines a bad floorplan can create all kind issues in the design (congestion, timing, noise, IR, routing issues). A bad floorplan will blow up the area, power & affects reliability, life of the IC and also it can increase overall IC cost (more effort to closure, more LVTS/ULVTS).
+
+**Placement** is the process of determining the locations of circuit devices on a die surface. It is an important stage in the VLSI design flow, because it affects routabil- ity, performance, heat distribution, and to a less extent, power consumption of a design.
+
+**Clock Tree Synthesis** is a technique for distributing the clock equally among all sequential parts of a VLSI design. The purpose of Clock Tree Synthesis is to reduce skew and delay.
+
+**Routing** in VLSI is making physical connections between signal pins using metal layers. Following Clock Tree Synthesis (CTS) and optimization, the routing step determines the exact pathways for interconnecting standard cells, macros, and I/O pins.
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
