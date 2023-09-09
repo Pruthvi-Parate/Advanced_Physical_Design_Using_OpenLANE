@@ -342,6 +342,74 @@ Below shown the different functionality of different size of library that consis
 
 ![flow3](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/ee3e78d5-09f3-44e0-95ac-85b0fe46420e)
 
+Below is the stick art layout diagram representation: 
+
+![stick](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/c8686751-6c19-45fe-b1bc-e27a9b0ed337)
+
+
+### Characterization Flow
+
+**Characterization** in VLSI refers to the process of analyzing and documenting the electrical behavior of electronic components, such as transistors, logic gates, memory cells, and standard cells, under various operating conditions. Characterization is essential for accurate circuit simulation and helps ensure that integrated circuits (ICs) meet their performance, power, and timing requirements.
+
+  
+Let's see below flow representation:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/373629ea-83eb-4407-8147-065241d522de)
+
+![charactflow](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/b85d4dbf-c696-4945-8142-e463ed06439e)
+
+![till7](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/c437f4e7-8f99-470e-a963-55fa785759ea)
+
+![8thstep](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/47270b71-857c-4c2a-9352-f07d8f9f1187)
+
+
+### Timing characterization 
+
+**Timing characterization** is essential for ensuring that digital circuits meet their timing requirements. It involves determining the timing behavior of various elements within the IC, such as logic gates, flip-flops, and interconnections, under different operating conditions.
+
+**Setup Time**: The amount of time before the clock edge that data must be stable to be correctly captured by a flip-flop.
+**Hold Time**: The amount of time after the clock edge that data must remain stable to be correctly captured.
+
+**Delay Calculation**:  
+Characterize the delays of logic gates, flip-flops, and interconnects.
+Calculate the propagation delay from the input of a circuit element to its output.  
+
+**Clock Skew Analysis**:
+Analyze the variation in clock arrival times at different parts of the circuit.
+Clock skew can impact the synchronization of sequential elements and can be critical in high-speed designs.  
+
+ **Corner Case Characterization**:
+- Perform timing characterization under different process corners (fast corner and slow corner) to account for manufacturing variations.
+- Analyze worst-case scenarios to ensure robust operation.
+
+**Post-Layout Timing Analysis**:
+- After physical design and layout, perform post-layout timing analysis to account for the actual interconnection delays and verify that the design still meets timing constraints.
+
+Below shown delay analysis : 
+
+```
+time(out*thr) - time(in*thr)
+```
+
+![delay1](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/d70c1d5c-1237-4de7-a7be-33a43244ba61)
+
+Below is the graphical representation:  
+
+![delay2](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/1b445c87-f5eb-49b1-9944-e64de07d1086)
+
+Below is the slew low and high threshold : 
+
+![delay3](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/4c27bb89-67f7-416f-ab1d-ac7afc01bc3f)
+
+![delay4](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/f1ed1a35-5410-42b9-b36a-83904fe4c89c)
+
+Below is the timing threshold definitions:  
+
+![timing2](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/dd35c690-12e5-4a01-872e-153ca1d1b581)
+
+![timingdef](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/626faea1-9572-42b7-8b8b-bfa9aef71048)
+
+
 
 
 ## References
