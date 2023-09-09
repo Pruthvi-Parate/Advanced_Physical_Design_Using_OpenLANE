@@ -273,6 +273,9 @@ Here below is the representation of the flow:
 
 ![optflow](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/9a01cb34-6a44-4519-b355-a3c707d84b9b)
 
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/e63f4f18-c5e3-4d5e-97ad-d543ec7f3936)
+
+
 **Logic synthesis** is a crucial step in the design of digital integrated circuits (ICs) and plays a central role in transforming a high-level hardware description into a gate-level representation that can be fabricated in silicon.  
 
 **Floorplan** is one the critical & important step in Physical design. Quality of your Chip / Design implementation depends on how good is the Floorplan. A good floorplan can be make implementation process (place, cts, route & timing closure) cake walk. On similar lines a bad floorplan can create all kind issues in the design (congestion, timing, noise, IR, routing issues). A bad floorplan will blow up the area, power & affects reliability, life of the IC and also it can increase overall IC cost (more effort to closure, more LVTS/ULVTS).
@@ -283,8 +286,30 @@ Here below is the representation of the flow:
 
 **Routing** in VLSI is making physical connections between signal pins using metal layers. Following Clock Tree Synthesis (CTS) and optimization, the routing step determines the exact pathways for interconnecting standard cells, macros, and I/O pins.
 
+### Run placement in OpenLANE
+
+Below is the command to run placement in openlane 
+
+```
+run_placement
+```
+Below will be the result :  
+
+![placement](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/9b662b77-80bf-413c-a253-c59a99cfeee2)
+
+![place](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/76ff3d99-f329-4d6a-b1ea-350f5dbfd85b)
+
+## Cell Design Flow 
+
+Below is the representation of cell design flow
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/d9b0c205-02eb-4517-932b-9342274a604e)
+
+
+
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
 2. https://github.com/kunalg123/
 3. https://openlane.readthedocs.io/en/latest/getting_started/installation/installation_ubuntu.html#installation-of-required-packages
 4. https://en.wikipedia.org/
+5. https://www.researchgate.net/
