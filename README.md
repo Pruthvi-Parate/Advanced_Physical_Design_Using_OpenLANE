@@ -728,7 +728,7 @@ drc why
 
 ![3errordrcwhy](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/79d04b91-b800-4379-9a1e-49d8f0041671)
 
-Now create a box and hover over the metal3 on the sidepar and press 'p' on the keyboard :  
+Now create a box and hover over the metal3 on the sidepar and press 'p' on the keyboard (p for paint) :  
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/eabab38d-bc25-43cd-b952-42b4e04be58e)
 
