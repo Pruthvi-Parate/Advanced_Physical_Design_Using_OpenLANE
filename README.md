@@ -625,6 +625,39 @@ It will create `sky130_inv.spice` file :
 
 ![5spicefile](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/ab97542a-7543-49e5-80ea-b624ccb6ad46)
 
+Now include the `pshort.lib` and `nshort.lib` libraries and modified the models. 
+
+Then pulse is given in which format is below:  
+
+`PULSE(V1 V2 Tdelay Trise Tfall Ton Tperiod Ncycles)`  
+
+ Below is the modified spice file:  
+
+ ![6modifiedinv](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/7a3685dc-e894-4a35-b42c-8a6bc829298e)
+
+Now run it in ngspice :  
+
+![7ngspiceshow](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/4d16af1e-a825-4b66-b517-a73286f63e36)
+
+Now give below command :  
+
+```
+plot y vs time a
+```
+
+It will give below graph :  
+
+![8ngplot](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/78931dd9-56d1-448f-93c3-8f79e0d40cd9)
+
+
+Now if zoom the graph to find rise time difference here is the representation:  
+
+![9-zoomgraph](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/5b29d1b2-1021-4b40-bc00-aed62ba86e00)
+
+And then click on the graph it will show :  
+
+![10value](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/dc2c5cb1-8e72-4d6d-a9fd-009e75637b2f)
+
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
