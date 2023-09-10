@@ -813,6 +813,26 @@ Below is the modified layout:
 
 ![8copy](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/04d36d05-1814-4411-a29a-42454e82c433)
 
+**Implement poly resistor spacing**
+
+Copy the three resistors by selecting (Edit > select area) and then press 'c' on keyboard.  
+You can move the copied resistors by pressing 'm' key and arrow key.  
+
+Now create n diffusion and p diffusion by creating box and selecting the `ndiff` and `pdiff` from the sidebar(by clicking the middle button of the mouse).  
+
+Then modify the sky130A.tech file by just modifying the `*nsd` to `alldiff`.  
+Now type below command in magic's terminal and all the rules will correctly identify :  
+
+``
+drc check
+``
+
+Below is the representation:  
+
+![9npdiffusion](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/ca855626-edb1-464a-a4d8-e7ab3d302ac1)
+
+
+
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
