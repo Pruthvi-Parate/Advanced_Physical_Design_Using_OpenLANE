@@ -571,6 +571,61 @@ It will show the points in ngspice terminal:
 ![diffckt2OutvsTimeIn](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/85cf86c9-defc-494e-a6a8-80c77c60aa77)
 
 
+### VSDSTDCelldesign Lab 
+
+First git clone the vsdstdcelldesign repository using below command :  
+
+``
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+``  
+
+There will be `sky130_inv.mag` file 
+
+Use the sky130A.tech file from the `libs` folder when you are running the magic.
+
+To run the layout design in magic use the below command :  
+
+```
+magic -T sky130A.tech sky130_inv.mag &
+```
+
+![1](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/faddcf47-e351-49f6-a9f4-2f3536f30cde)
+
+Now if you click on any component and type `what` in terminal it will tell about the component:  
+
+![2whatnmos](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/16f547de-44bd-45dc-9e11-b2fb1f0e7f9a)
+
+Here shown the output terminal :  
+
+![3whaty](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/a897de8c-e624-4887-ba49-70a71affac5f)
+
+Now to understand this stick diagram below is representation where pdiff, ndiff, poly etc are shown:  
+
+![4cmosinfo](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/571d6378-d4b8-4fd4-b393-fc039331f4ed)
+
+**Pdiff (p-diffusion)**: Pdiff represents the P-diffusion layer in a CMOS process. This layer is used to create the N-channel MOSFETs (NMOS) in the CMOS technology. It typically represents regions where the silicon substrate is doped with a P-type dopant, creating the source and drain regions of NMOS transistors.  
+
+**Ndiff (n-diffusion**): Ndiff represents the N-diffusion layer in a CMOS process. This layer is used to create the P-channel MOSFETs (PMOS) in the CMOS technology. It typically represents regions where the silicon substrate is doped with an N-type dopant, creating the source and drain regions of PMOS transistors.  
+
+**Poly (polysilicon)**: The Poly layer represents the polysilicon layer, which is used to form the gates of both NMOS and PMOS transistors. The gates control the flow of current between the source and drain regions in these transistors.  
+
+**Pdcontact (p-diffusion contact)**: Pdcontact represents the contact points or vias used to make electrical connections to the P-diffusion layer. These contacts are used to connect metal layers to the P-diffusion regions.  
+
+**Ndcontact (n-diffusion contact**): Ndcontact represents the contact points or vias used to make electrical connections to the N-diffusion layer. These contacts are used to connect metal layers to the N-diffusion regions.
+
+**extthresh**: Using this command it is used to extract parasitic capacitance  
+
+Now to extract it to spice use below command in magic terminal :  
+
+``
+ext2spice
+``
+
+It will create `sky130_inv.spice` file : 
+
+![5spicefile](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/ab97542a-7543-49e5-80ea-b624ccb6ad46)
+
+
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
 2. https://github.com/kunalg123/
