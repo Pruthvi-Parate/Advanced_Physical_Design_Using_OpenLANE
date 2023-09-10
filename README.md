@@ -27,7 +27,7 @@
 - [VSDST cell design lab](#vsdstdcelldesign-lab)
 - [Magic DRC](#magic-drc)
 - [Fix poly.9 error in sky.tech file](#fix-poly9-error-in-skytech-file)
-- [Implement poly resistor spacing]
+- [Implement poly resistor spacing](#implement-poly-resistor-spacing)
 - [Challenge exercise to describe DRC error](#challenge-exercise-to-describe-drc-error)
 - [Lab challenge to find missing or incorrect rules (creating magic DRC rule)](#lab-challenge-to-find-missing-or-incorrect-rules-creating-magic-drc-rule)
 
