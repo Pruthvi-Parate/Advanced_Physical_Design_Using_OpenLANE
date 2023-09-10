@@ -518,11 +518,18 @@ Below is the model file :
 .endl
 ```
 
+![1ngspice](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/7beb4d5c-48ab-428d-a04a-0dfa258192b2)
+
+
 to run it open ngspice and in command give :  
 
 ```
 source cmos.cir
 ```
+
+![2ngspice](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/328c0c48-2b89-46b3-8073-b10ff8f2b56d)
+
+
 To execute it : 
 
 `
@@ -538,6 +545,30 @@ Now using `plot out vs in` Below graph will be seen:
 Now if we increase the width of pmos which is `0.9375` below graph is seen and you can compare it with the above graph :  
 
 ![shiftplot](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/8772dcb3-772b-4da2-bebe-c1cb717cbb7d)
+
+Below shown switching threshold representation where `Wp/Lp and xWn/Ln` relation and calculation shown: 
+
+![4switchthreshold](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/be436190-b7b5-49d1-8cb7-98dd18e6324d)
+
+
+Below is the modified cmos file:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/271af951-0287-4ea5-83b3-1b700bace805)
+
+Here is the graph of `out vs time` 
+
+![ckt2OutvsTime](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/d17a1a4e-8c0d-49a1-a6dd-9d5ec2876083)
+
+Now here is the graph of `out vs time in`
+
+![ckt2OutvsTimeIn](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/b63e5e15-85bc-4570-8ab7-0931995cf250)
+
+To find the difference between two graph points just drag with mouse and it will zoom and then you can just click on the graph.  
+It will show the points in ngspice terminal:  
+
+![2diffckt2OutvsTimeIn](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/176fb2ef-fb76-4d81-9687-84075023721e)
+
+![diffckt2OutvsTimeIn](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/85cf86c9-defc-494e-a6a8-80c77c60aa77)
 
 
 ## References
