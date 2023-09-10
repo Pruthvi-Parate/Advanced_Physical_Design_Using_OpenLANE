@@ -873,6 +873,45 @@ Here shown the representations:
 
 ![9final](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/4e0e24a9-a56a-49d3-92e5-6b7bfc6bd7b9)
 
+### Lab challenge to find missing or incorrect rules (creating magic DRC rule)
+
+Modify the sky130A.tech file according to below:  
+
+change the cifmaxwidth code to this :  
+
+```
+cifmaxwidth nwell_untapped 0 bend_illegal \
+
+	"Nwell missing tap (nwell.4)"
+```
+
+![ciffmax](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/cf237e7b-9017-4800-bc69-6de5204b55d9)
+
+Then modify the nwell according to this :  
+
+![nwellmodified](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/7a9dece1-35a2-4dcf-87eb-08d83daa8b39)
+
+Below is the variant modification:  
+
+![variants](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/05c855b0-7942-460b-b956-e8ae9f7f2a15)
+
+After modification give commands shown below in terminal :  
+
+``
+tech load sky130A.tech
+drc check
+drc style drc(full)
+drc check
+``
+See below there is no error for now :  
+
+![4noerror](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/99f53718-f357-4351-9cea-6fdf37aec5b1)
+
+![5drccheck](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/8b637453-83f2-42b5-a010-6282dbdb19d4)
+
+Now tapp using nsubstratencontact shown below it will change DRC:  
+
+![6final](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/760490cf-3bb4-4af9-b58f-3ea1288a77af)
 
 
 ## References
