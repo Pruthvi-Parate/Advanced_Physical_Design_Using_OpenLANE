@@ -684,6 +684,66 @@ And then click on the graph it will show :
 
 ![10value](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/dc2c5cb1-8e72-4d6d-a9fd-009e75637b2f)
 
+## MAGIC DRC
+
+You can read Magic user guide from : `http://opencircuitdesign.com/magic/` 
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/56354c85-f2f1-4dd8-a305-567ad241c664)
+
+To use the lab contents below is the command:  
+
+```
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+```
+
+To extract the .tgz use below command:  
+
+```
+tar xfz drc_tests.tgz
+```
+
+Now in that extracted folder there are files like this :  
+
+![drctest](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/a1f1c8b8-82ef-4a51-ae2d-5930579cd82c)
+
+Now open the terminal to open the file give below commands:  
+
+```
+magic -d XR met3.mag
+```
+Below is the periphery rules for m3: (which can be found on `https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#m3`)   
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/7d65c0c6-8bef-450e-8420-810376d593e4)
+
+
+Below is the representation:  
+
+![2meg3](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/045954d6-a9e0-4f74-b9ba-6c2c578d37fc)
+
+Then with the mouse select the box and type the command it will show error of overlap, width spacing etc:  
+
+``
+drc why
+``
+
+![3errordrcwhy](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/79d04b91-b800-4379-9a1e-49d8f0041671)
+
+Now create a box and hover over the metal3 on the sidepar and press 'p' on the keyboard :  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/eabab38d-bc25-43cd-b952-42b4e04be58e)
+
+Then type below command in magic terminal :  
+
+``
+cif see VIA2
+``
+
+![4cifsee](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/f58eb19b-73b5-4aae-b1cc-0e191f58326f)
+
+### Fix poly.9 error in sky.tech file
+
+
+
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
@@ -692,5 +752,6 @@ And then click on the graph it will show :
 4. https://vsdiat.com/
 5. https://github.com/Devipriya1921/Physical_Design_Using_OpenLANE_Sky130
 6. https://github.com/nickson-jose/vsdstdcelldesign/
-7. https://en.wikipedia.org/
-8. https://www.researchgate.net/
+7. http://opencircuitdesign.com/magic/
+8. https://en.wikipedia.org/
+9. https://www.researchgate.net/
