@@ -14,6 +14,12 @@
 - [preplaced cells](#preplaced-cells)
 - [decoupling capacitor](#decoupling-capacitor)
 - [floorplan using openlane](#floorplan-using-openlane)
+- [Initial Place Design](#initial-place-design)
+- [Run placement in openlane](#run-placement-in-openlane)
+- [Cell Design Flow](#cell-design-flow)
+- [Characterization Flow](#characterization-flow)
+- [Timing characterization](#timing-characterization)
+
 
 
 
