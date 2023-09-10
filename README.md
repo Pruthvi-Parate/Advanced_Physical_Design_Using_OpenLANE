@@ -763,10 +763,55 @@ Now edit the sky.tech file. Open it in the text editor using below command:
 Now search for the `poly.9`there will be 2-3 results here is one of them :  
 
 ```
-spacing npres *nsd 480 touching_illegal...
-  "poly.resistor..."
+spacing npres *nsd 480 touching_illegal \
+	"poly.resistor spacing to N-tap < %d (poly.9)"
 ```
 
+Modify it to this :  
+
+```
+spacing npres allpolynonres 480 touching_illegal \
+	"poly.resistor spacing to N-tap < %d (poly.9)"
+```
+
+Now it should be like this :  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/29b5038f-2a70-432b-b15a-5dfff7f2daf5)
+
+Now update the other one :  
+
+```
+spacing xhrpoly,uhrpoly,xpc alldiff 480 touching_illegal \
+
+	"xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"
+```
+
+Modify it to this:  
+
+```
+spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching_illegal \
+
+	"xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"
+```
+It should be look like this:   
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/eed19458-b52a-4cac-8a58-cf9a0d2a92b6)
+
+Now save it. You dont have to close the magic after the modifying the sky.tech file. Type the below command in magic's terminal:  
+
+``
+tech load sky130A.tech
+``
+In the warning click on yes.  
+Then type below command:  
+
+``
+drc check
+``
+
+Below is the modified layout:  
+
+![8copy](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/04d36d05-1814-4411-a29a-42454e82c433)
 
 
 ## References
