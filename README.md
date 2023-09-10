@@ -415,6 +415,9 @@ Below is the timing threshold definitions:
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
 2. https://github.com/kunalg123/
-3. https://openlane.readthedocs.io/en/latest/getting_started/installation/installation_ubuntu.html#installation-of-required-packages
-4. https://en.wikipedia.org/
-5. https://www.researchgate.net/
+3. https://openlane.readthedocs.io/en/latest/getting_started/installation/installation_ubuntu.html#installation-of-required-packages'
+4. https://vsdiat.com/
+5. https://github.com/Devipriya1921/Physical_Design_Using_OpenLANE_Sky130
+6. https://github.com/nickson-jose/vsdstdcelldesign/
+7. https://en.wikipedia.org/
+8. https://www.researchgate.net/
