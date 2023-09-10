@@ -842,5 +842,6 @@ Below is the representation:
 5. https://github.com/Devipriya1921/Physical_Design_Using_OpenLANE_Sky130
 6. https://github.com/nickson-jose/vsdstdcelldesign/
 7. http://opencircuitdesign.com/magic/
-8. https://en.wikipedia.org/
-9. https://www.researchgate.net/
+8. https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
+9. https://en.wikipedia.org/
+10. https://www.researchgate.net/
