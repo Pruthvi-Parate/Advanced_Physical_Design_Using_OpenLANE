@@ -31,7 +31,11 @@
 - [Challenge exercise to describe DRC error](#challenge-exercise-to-describe-drc-error)
 - [Lab challenge to find missing or incorrect rules (creating magic DRC rule)](#lab-challenge-to-find-missing-or-incorrect-rules-creating-magic-drc-rule)
 
+**4. Day 4**  
 
+ **Pre-Layout timing analysis and importance of good clock tree**  
+
+ 
 # Day_1 :Inception of open-source EDA, OpenLANE and Sky130 PDK  
 
 ## How to talk to computers 
