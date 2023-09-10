@@ -409,7 +409,40 @@ Below is the timing threshold definitions:
 
 ![timingdef](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/626faea1-9572-42b7-8b8b-bfa9aef71048)
 
+# DAY 3 : Design Library Cell using magic and ngspice
 
+### Inverter
+
+A **CMOS inverter**, short for Complementary Metal-Oxide-Semiconductor inverter, is a fundamental digital electronic circuit that performs the basic logical operation of inversion. In other words, it takes an input signal and produces an output signal that is the logical complement of the input. If the input is high (logic 1), the output will be low (logic 0), and vice versa.  
+
+The input signal is applied to the gate terminals of both the NMOS and PMOS transistors. The output is taken from the connection point (the drain of NMOS and the source of PMOS) between these two transistors.  
+
+**NMOS Operation**: When the input is logic high (1), the NMOS transistor turns on because a positive voltage is applied to its gate. This establishes a low-resistance path between the output and ground, causing the output to be pulled to logic low (0).  
+
+**PMOS Operation**: Conversely, when the input is logic low (0), the PMOS transistor turns on because a low voltage is applied to its gate. This establishes a low-resistance path between the output and the power supply voltage (VDD), causing the output to be pulled to logic high (1).
+
+
+Below shown the inverter diagram : 
+
+![inverter](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/c0f143c3-3806-4d74-a701-2d38e8475298)
+
+Below shows nodes:   
+
+![2inverternodes](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/08d0db99-e46f-447c-80b5-7227ad9fadbc)
+
+Here is spice deck simulation shown:  
+
+![3spicedeck](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/db0c1c30-0a35-417d-80b8-d48ec66ec503)
+
+Here is a cmos.cir file: 
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/013b3083-47b6-42c4-a65b-d52916dee748)
+
+to run it open ngspice and in command give :  
+
+```
+source cmos.cir
+```
 
 
 ## References
