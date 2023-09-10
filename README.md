@@ -20,7 +20,16 @@
 - [Characterization Flow](#characterization-flow)
 - [Timing characterization](#timing-characterization)
 
-
+**3. Day 3**
+- [ Design Library Cell using magic and ngspice](#day-3--design-library-cell-using-magic-and-ngspice)
+- [Inverter](#inverter)
+- [CMOS Fabrication Process](#cmos-fabrication-process)
+- [VSDST cell design lab](#vsdstdcelldesign-lab)
+- [Magic DRC](#magic-drc)
+- [Fix poly.9 error in sky.tech file](#fix-poly9-error-in-skytech-file)
+- [Implement poly resistor spacing]
+- [Challenge exercise to describe DRC error](#challenge-exercise-to-describe-drc-error)
+- [Lab challenge to find missing or incorrect rules (creating magic DRC rule)](#lab-challenge-to-find-missing-or-incorrect-rules-creating-magic-drc-rule)
 
 
 # Day_1 :Inception of open-source EDA, OpenLANE and Sky130 PDK  
@@ -819,7 +828,7 @@ Below is the modified layout:
 
 ![8copy](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/04d36d05-1814-4411-a29a-42454e82c433)
 
-**Implement poly resistor spacing**
+### Implement poly resistor spacing
 
 Copy the three resistors by selecting (Edit > select area) and then press 'c' on keyboard.  
 You can move the copied resistors by pressing 'm' key and arrow key.  
