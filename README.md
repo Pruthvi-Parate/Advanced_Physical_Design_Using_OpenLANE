@@ -831,6 +831,47 @@ Below is the representation:
 
 ![9npdiffusion](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/ca855626-edb1-464a-a4d8-e7ab3d302ac1)
 
+### Challenge exercise to describe DRC error
+
+Open sky130A.tech file and search `cifmaxwidth` below is the representation:  
+
+![1](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/50f56848-6d90-4215-98f2-bfad07fc6f03)
+
+Below is the rule shown for nwell (which can be access by skywater sky130 pdk website) :  
+
+![3nwellrule](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/7d980717-2225-4bc5-8dcb-b2e3a7f0791b)
+
+Also refer this dnwell rules:  
+
+![2rule](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/407196cf-9a32-47fa-a29c-f0bc53812fb7)
+
+Refer this style drc in sky130A.tech file :  
+
+![4styledrc](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/daf3b70f-b1d3-44ab-9909-98a82ca63695)
+
+First create a box around cell nwell6 , Now in tkcon terminal type below commands:  
+
+![5nwell](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/b50367af-1061-496b-8e54-7687b3d035c7)
+
+![6errornwell](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/6d8f0d4a-b97a-48c5-ae4b-3a39db94e552)
+
+
+```
+cif ostyle drc
+cif see dnwell_shrink
+feed clear
+cif see nwell_missing
+feed clear
+```
+
+Here shown the representations:  
+
+![7shrink](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/b0292e43-8551-4a7b-8c70-36153cd1e5b9)
+
+
+![8feedclear](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/1762a25e-92f7-44b3-80c5-2d1f70060d74)
+
+![9final](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/4e0e24a9-a56a-49d3-92e5-6b7bfc6bd7b9)
 
 
 
