@@ -732,7 +732,9 @@ Now create a box and hover over the metal3 on the sidepar and press 'p' on the k
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/eabab38d-bc25-43cd-b952-42b4e04be58e)
 
-Then type below command in magic terminal :  
+You can also make a box on elements to see metalcuts.  
+
+Then type below command (to see metalcuts) in magic terminal :  
 
 ``
 cif see VIA2
@@ -742,6 +744,28 @@ cif see VIA2
 
 ### Fix poly.9 error in sky.tech file
 
+To load the poly.mag :  
+
+``
+load poly.mag
+``
+
+It will open layout of the file in magic:  
+
+![5polymag](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/1252e6bb-00c5-4e46-9893-4b63f7c457fe)
+
+You can see what are the elements by selecting it and type `what` in the terminal.  
+
+Now edit the sky.tech file. Open it in the text editor using below command:  
+
+`gedit sky130A.tech`
+
+Now search for the `poly.9`there will be 2-3 results here is one of them :  
+
+```
+spacing npres *nsd 480 touching_illegal...
+  "poly.resistor..."
+```
 
 
 
