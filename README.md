@@ -932,7 +932,22 @@ Now tapp using nsubstratencontact shown below it will change DRC:
 
 ![6final](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/760490cf-3bb4-4af9-b58f-3ea1288a77af)
 
+# Day-4 : Pre-Layout timing analysis and importance of good clock tree
 
+### Convert grid info to track info
+Below is the track.info shown:  
+
+![1trackinfo](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/59744ac3-c799-4ba3-bc6c-71d95c62b5b4)
+
+Below is the before grid on representation:  
+
+![2beforecon](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/51abb496-0289-4d3e-b0fb-ce6d6e86e2f4)
+
+A key criterion outlined in the tracks.info specification is that ports must be positioned at the juncture of both horizontal and vertical tracks. Specifically, when dealing with the CMOS Inverter, ports A and Y are designated to reside within the li1 layer. It is imperative to guarantee that these ports are indeed situated precisely at the intersection of horizontal and vertical tracks.Below is the command:  
+
+```
+grid 0.46um 0.34um 0.23um 0.17um
+```
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
 2. https://github.com/kunalg123/
