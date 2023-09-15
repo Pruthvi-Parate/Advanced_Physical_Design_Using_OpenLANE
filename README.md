@@ -1070,6 +1070,20 @@ During the floorplan stage, we detected the inclusion of the custom cell, as out
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/281ccbf4-ab40-40ab-8392-ba5e2de7b5ff)
 
+Now do ``run_placement``
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/38448d2b-2d94-4012-93f3-b8235deb5df4)
+
+**Setup & Hold time:**  
+
+Setup Time is the time the input data signals are stable (either high or low) before the active clock edge occurs. **Hold Time** is the time the input data signals are stable (either high or low) after the active clock edge occurs.  
+Below is the representation:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/6867bffd-28f6-4d8a-afd3-a6390018f457)
+
+Lets understand in detail: Setup time is a crucial parameter, signifying the minimum duration preceding the active edge of the clock signal during which the data input must remain steady for accurate latching. Should this requirement be disregarded, it can lead to a perilous scenario known as a setup violation. In such instances, incorrect data may be captured, imperiling the integrity of the entire system.  
+
+Conversely, HOLD time represents another pivotal consideration, specifying the minimum interval post the clock's active edge within which the data input must stay unchanged. A violation in this context results in a hold violation, often culminating in erroneous data latching. It's vital to emphasize that both setup and hold times are exclusively measured concerning the clock's active edge. These stringent timing constraints form the cornerstone of dependable and error-free digital circuit operation, safeguarding against data corruption and ensuring reliable data capture.
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
