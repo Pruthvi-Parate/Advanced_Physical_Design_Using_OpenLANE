@@ -1046,6 +1046,31 @@ To seamlessly integrate a standard cell into the OpenLANE flow, execute the foll
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 ```
+
+Below is the synthesis report :  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/ebfa4788-08c0-44a2-80f1-87c39ae7804c)
+
+### Introduction to Delay tables
+In the realm of VLSI design, the parameter of "Delay" wields a profound influence on the behavior of cells within our designs. It essentially acts as the arbiter governing various critical timing aspects. When dealing with cells of different sizes and threshold voltages, we establish what's known as a "delay model table," often referred to as a "timing table." This table plays a pivotal role in capturing the intricate relationship between a cell's delay and its input transition and output load.  
+
+Consider two scenarios: one where a cell (let's call it X1) is situated at the end of a lengthy wire, and another where the same cell is positioned at the terminus of a shorter wire. In the former case, the delay of this cell differs significantly due to the adverse impact of resistance and capacitance along the extended wire, resulting in a slower transition. Conversely, in the latter scenario, with the cell located at the end of the shorter wire, the delay is comparatively lower, reflecting the more favorable signal transition conditions. Even though both instances employ the same cell, the delay is distinctly altered based on the input transition characteristics, illustrating the profound influence of wire length.  
+
+VLSI engineers have discerned a set of specific constraints governing the insertion of buffers to uphold signal integrity. They've observed that each buffer level must adhere to consistent sizing, yet their individual delays can fluctuate contingent upon the load they are driving. To address this intricate challenge, they introduced the concept of "delay tables." These tables essentially manifest as two-dimensional arrays, housing precise values for input slew and load capacitance, each associated with varying buffer sizes. These delay tables serve as comprehensive timing models for our designs.  
+
+In the practical execution of algorithms, these delay tables become indispensable tools. They leverage provided input slew and load capacitance values to dynamically compute the corresponding delay values for the associated buffers. In scenarios where exact delay data may be lacking, the algorithm adeptly employs interpolation techniques. It strategically identifies the nearest available data points within the tables and extrapolates from them to estimate the requisite delay values, ensuring the precision and reliability of the overall design. This method allows VLSI designers to navigate the complex interplay of delay, signal integrity, and buffer management, ultimately delivering optimized and functional semiconductor devices.  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/7feef496-f5ec-4e1c-8714-3bea1e5cd6eb)
+
+### Custom Standard Cell Integration in the OpenLane Flow  
+
+We conducted synthesis and identified negative slack while also successfully meeting the timing constraints.
+  
+During the floorplan stage, we detected the inclusion of the custom cell, as outlined below.  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/281ccbf4-ab40-40ab-8392-ba5e2de7b5ff)
+
+
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
 2. https://github.com/kunalg123/
