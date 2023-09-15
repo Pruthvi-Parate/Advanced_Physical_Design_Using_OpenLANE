@@ -948,6 +948,104 @@ A key criterion outlined in the tracks.info specification is that ports must be 
 ```
 grid 0.46um 0.34um 0.23um 0.17um
 ```
+
+Below is the after grid representation:  
+
+![3aftergrid](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/cabab034-6360-4261-b5fe-5822570cbd97)
+
+The subsequent step in the process involves the extraction of the LEF file for the completed layout of the cell. This crucial step is essential to facilitate the placement and routing tools effectively. It necessitates the precise specification of characteristics and definitions for the cell's pins. Ports, which represent the declared PINs of the macro, are encapsulated within a cell and are formatted as a macro cell in LEF files. Our primary objective is to generate an LEF file in a predefined format based on a given configuration, such as a straightforward CMOS inverter. To accomplish this, the initial task is to meticulously define each port and allocate the appropriate class and use attributes to each one.  
+
+To establish the port configuration, you can utilize the Magic console, and here's a detailed breakdown of the steps involved:
+
+Begin by opening the Magic Layout window.
+
+Source the .mag file associated with your design, in this case, the inverter layout.
+
+Navigate to the "Edit" menu and select "Text." This action will prompt a dialogue box to appear.
+
+Within the dialogue box, double-click on the letter 'S' located at the I/O labels on the layout.
+
+You will notice that the text field automatically populates with the appropriate string name and size for the port.
+
+To finalize the port definition, ensure that the "Port enable" checkbox is selected, indicating that this element functions as a port. Additionally, make sure that the "Default" checkbox remains unchecked.
+
+Your port configuration is now set up as illustrated in the figure.
+
+![4Asize](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/364f7f20-ba64-49f6-b671-ef1f3635685e)
+
+![5Ysize](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/0498d2e8-80a5-43e2-9731-5bd4c2076a89)
+
+![6VGND](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/0b93e288-eab6-4097-8224-ee5eee2110ce)
+
+![7VPWR](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/2bb3a56c-686b-43eb-9fa9-f9a3858c0e2d)
+
+Open the tkcon window or the relevant environment where you can define port attributes.
+
+Define the purpose of each port as follows:  
+
+```
+port A class input
+port A use signal
+
+port Y class output
+port Y use signal
+
+port VPWR class inout
+port VPWR use power
+
+port VGND class inout
+port VPWR use ground
+```
+
+![8tkconcmd](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/436e3ac6-89b1-43b4-b8c0-b030224eb880)
+
+
+Generate the lef file using below command:  
+
+``
+lef write <name>
+``
+
+### Incorporating Custom Cells into OpenLANE Flow
+
+To incorporate the new standard cell into the synthesis process, you should follow these steps:
+
+Begin by duplicating the sky130_vsdinv.lef file and placing it in the designs/picorv32a/src directory.
+
+As ABC maps the standard cell to a specific library, you must ensure that the CMOS inverter is defined within a library. To achieve this, you should copy the sky130_fd_sc_hd_typical.lib file, which is located in the vsdstdcelldesign/libs directory, into the designs/picorv32a/src directory. It's worth noting that you may also need to copy the slow and fast library files if they are relevant to your design. Modify the config.tcl file:  
+
+```
+
+# Design
+set ::env(DESIGN_NAME) "picorv32a"
+
+set ::env(VERILOG_FILES) "$::env(DESIGN_DIR)/src/picorv32a.v"
+
+set ::env(CLOCK_PORT) "clk"
+set ::env(CLOCK_NET) $::env(CLOCK_PORT)
+
+set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) {1}
+
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+
+set filename $::env(DESIGN_DIR)/$::env(PDK)_$::env(STD_CELL_LIBRARY)_config.tcl
+if { [file exists $filename] == 1} {
+	source $filename
+}
+
+```
+
+To seamlessly integrate a standard cell into the OpenLANE flow, execute the following commands:  
+
+```
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+```
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
 2. https://github.com/kunalg123/
