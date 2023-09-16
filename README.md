@@ -47,14 +47,14 @@
 **5. Day 5**  
 
 **Final steps for RTL2GDS**	
-	- [Maze Routing and Lee's algorithm](#maze-routing-and-lees-algorithm)
-	- [Design Rule Check](#design-rule-check)
-	- [Power Distribution Network and routing](#power-distribution-network-and-routing)
-	- [Routing](#routing)
-	- [TritonRoute Features](#tritonroute-features)
+- [Maze Routing and Lee's algorithm](#maze-routing-and-lees-algorithm)
+- [Design Rule Check](#design-rule-check)
+- [Power Distribution Network and routing](#power-distribution-network-and-routing)
+- [Routing](#routing)
+- [TritonRoute Features](#tritonroute-features)
 
 - [References](#references)
-- 
+- [Acknowledgement](#acknowledgement)
  
 # Day_1 :Inception of open-source EDA, OpenLANE and Sky130 PDK  
 
