@@ -1126,7 +1126,47 @@ Below is the representation:
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/821bf9ec-2c78-4f5a-95ee-ceef209c859e)
 
-Below shown cts buffering
+Below shown cts buffering  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/429fd0f9-0f30-40ab-a359-4b9f62ab8472)
+
+
+### Crosstalk and clock net shielding
+
+Crosstalk refers to an undesirable phenomenon that occurs when signals on adjacent conductors or interconnects interfere with each other. This interference can lead to errors in data transmission and reception, which can ultimately impact the overall functionality and performance of integrated circuits (ICs) and electronic systems. Crosstalk can manifest in both digital and analog circuits and can be a significant concern as ICs become more densely packed with components and interconnects.  
+
+Clock net shielding, also known as clock tree shielding, is a technique used in Very Large Scale Integration (VLSI) design to reduce the impact of crosstalk and noise on clock signals. Clock signals are critical in digital circuits as they synchronize the operation of various components within an integrated circuit (IC). Ensuring the integrity of clock signals is crucial to the overall performance and reliability of the IC.
+
+Below is the representation:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/85ee62a5-e64c-4d3b-9619-41eb2711cf18)
+
+
+**Types of Crosstalk**:  
+
+- Capacitive Crosstalk: This occurs due to the capacitive coupling between adjacent conductors. When one signal transitions from high to low (or vice versa), it induces a voltage change on nearby conductors, leading to interference.  
+- Inductive Crosstalk: This results from the inductive coupling between conductors. When there is a change in current flow in one conductor, it induces a voltage in an adjacent conductor, causing interference.
+
+**Techniques to Mitigate Crosstalk**:
+
+- Spacing and Wire Sizing: Increasing the distance between adjacent conductors and using wider wires can reduce capacitive and inductive coupling.
+- Shielding: Adding shielding layers between sensitive conductors can minimize interference.
+- Buffering and Repeaters: Buffering signals and inserting repeater circuits can help restore signal integrity.
+- Clock Gating: Disabling clock signals when not in use can reduce dynamic power consumption and crosstalk.
+
+### Lab Using TritonCTS:  
+
+In this stage, our primary goal is to ensure that the clock signal propagates uniformly to reach every clock pin from the source while minimizing skew and insertion delay. To achieve this, we employ an H-tree structure using a midpoint strategy. Additionally, to balance any remaining skews, we strategically incorporate clock inverters or buffers along the clock path.  
+
+
+Before initiating Clock Tree Synthesis (CTS) in TritonCTS, it's important to note that if any previous attempts were made to reduce slack, there may have been modifications to the netlist through cell replacement techniques. Consequently, it's imperative to update the Verilog file using the "write_verilog" command. After this modification, the synthesis, floorplan, and placement steps need to be re-executed.  
+
+
+To initiate the Clock Tree Synthesis (CTS) process, please use the following command:  
+
+```
+run_cts
+```
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
