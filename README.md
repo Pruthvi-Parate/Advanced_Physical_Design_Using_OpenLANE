@@ -47,8 +47,11 @@
 **5. Day 5**  
 
 **Final steps for RTL2GDS**
-
-
+- [Maze Routing and Lee's algorithm](#maze-routing-and-lees-algorithm)
+- [Design Rule Check](#design-rule-check)
+- [Power Distribution Network and routing](#power-distribution-network-and-routing)
+- [Routing](#routing)
+- [TritonRoute Features](#tritonroute-features)
 	
  
 # Day_1 :Inception of open-source EDA, OpenLANE and Sky130 PDK  
@@ -1089,7 +1092,7 @@ Now do ``run_placement``
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/38448d2b-2d94-4012-93f3-b8235deb5df4)
 
-**Setup & Hold time:**  
+### Setup & Hold time:  
 
 Setup Time is the time the input data signals are stable (either high or low) before the active clock edge occurs. **Hold Time** is the time the input data signals are stable (either high or low) after the active clock edge occurs.  
 Below is the representation:  
