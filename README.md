@@ -1049,7 +1049,8 @@ add_lefs -src $lefs
 
 Below is the synthesis report :  
 
-![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/ebfa4788-08c0-44a2-80f1-87c39ae7804c)
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/8b57cab7-ac7e-4792-adc6-4b15243ae7e5)
+
 
 ### Introduction to Delay tables
 In the realm of VLSI design, the parameter of "Delay" wields a profound influence on the behavior of cells within our designs. It essentially acts as the arbiter governing various critical timing aspects. When dealing with cells of different sizes and threshold voltages, we establish what's known as a "delay model table," often referred to as a "timing table." This table plays a pivotal role in capturing the intricate relationship between a cell's delay and its input transition and output load.  
@@ -1066,9 +1067,8 @@ In the practical execution of algorithms, these delay tables become indispensabl
 
 We conducted synthesis and identified negative slack while also successfully meeting the timing constraints.
   
-During the floorplan stage, we detected the inclusion of the custom cell, as outlined below.  
+During the floorplan stage, we detected the inclusion of the custom cell.  
 
-![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/281ccbf4-ab40-40ab-8392-ba5e2de7b5ff)
 
 Now do ``run_placement``
 
