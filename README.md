@@ -1265,6 +1265,9 @@ we can check whether PDN has been created or no by check the current def environ
 
 ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/0031085e-8a0b-4894-9d04-c8cfdec5b79c)
 
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/5c430f3c-c9e7-4a15-9b89-0914f768c54c)
+
+
 Once the PDN is generated, designers use analysis tools to simulate and verify its performance. They check for voltage drop, IR (voltage drop due to resistance), electromigration, and other power-related issues.  
 
 Optimization techniques such as buffer insertion, voltage islands, and voltage scaling may be applied to improve PDN performance.  
@@ -1273,6 +1276,27 @@ After the chip's layout is complete, designers perform post-layout verification 
 
 Once the PDN is successfully generated and verified, and all design rules are met, the chip design is considered ready for tape-out. The final layout data is sent to a semiconductor foundry for fabrication.
 
+### Routing
+
+It is the process of establishing interconnections between various components (such as transistors, gates, and blocks) within an integrated circuit (IC) to enable proper functionality and data flow. It involves creating a network of wires or metal traces to connect different components according to the logical design and constraints while optimizing for factors like signal integrity, power efficiency, and manufacturability.  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/8468d045-f7fe-4263-b664-b9792e641f59)
+
+
+**Global vs. Detailed Routing:**  
+
+- Global Routing: This is the initial phase of routing where the major pathways for interconnects are defined. It determines the approximate location of wires and establishes high-level connections.
+- Detailed Routing: After global routing, detailed routing focuses on the specific routing paths for each net (a collection of connected components). It involves selecting the exact wires and vias (connections between metal layers) to create a functional and manufacturable layout.
+
+### TritonRoute Features  
+
+ TritonRoute is an open-source routing tool, which means it is freely available for use, modification, and distribution.  
+
+ TritonRoute focuses on detailed routing, which involves the precise placement of wires and vias to connect the various components and nets within an integrated circuit. It is typically used in the later stages of the physical design flow. The tool allows designers to specify the assignment of metal layers for routing, considering factors such as signal speed, power distribution, and available resources. Choosing the appropriate metal layers is essential for optimizing performance.  
+
+ The tool takes into account the placement of standard cells, macro blocks, and other routing tracks as obstacles when determining the path of wires. It avoids collisions and ensures connectivity. TritonRoute employs routing algorithms to find the optimal paths for interconnections. The choice of algorithm can impact factors such as wirelength, signal delay, and power consumption.  
+
+  TritonRoute-generated layouts are subject to physical verification steps to check for manufacturing-related issues, such as design rule violations and DRC errors.
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
