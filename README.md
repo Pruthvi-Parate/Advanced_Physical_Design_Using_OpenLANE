@@ -44,6 +44,12 @@
  - [Crosstalk and clock net shielding](#crosstalk-and-clock-net-shielding)
  - [Lab Using TritonCTS](#lab-using-tritoncts)
 
+**5. Day 5**  
+
+**Final steps for RTL2GDS**
+
+
+	
  
 # Day_1 :Inception of open-source EDA, OpenLANE and Sky130 PDK  
 
@@ -1176,6 +1182,97 @@ To initiate the Clock Tree Synthesis (CTS) process, please use the following com
 ```
 run_cts
 ```
+
+# Day 5 Final steps for RTL2GDS
+
+### Maze Routing and Lee's algorithm
+
+**The maze-routing algorithm** is a low overhead method to find the way between any two locations of the maze. The algorithm is initially proposed for chip multiprocessors (CMPs) domain and guarantees to work for any grid-based maze.  
+
+Below is the representation:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/3443b6d2-063f-42c6-b8ff-81126a706549)  
+
+**Algorithm Steps:**  
+
+**Initialization:**  
+
+- Create a grid or matrix representation of the routing area, where each cell represents a routing point.
+- Mark the source point with a value of 0.
+- Initialize all other cells with a large "infinity" value or a high number to represent unexplored areas or obstacles.
+
+**Wavefront Expansion:**
+  
+
+- Start with the source point and assign it a value of 0.
+- Begin a wavefront expansion process by visiting each point in the grid in a systematic manner (typically in a breadth-first search fashion).
+- For each unvisited neighbor of a point with the current wavefront value 'n', assign it a value of 'n+1'. This process continues until the destination point is reached or until no further progress is possible.
+
+**Backtracing:**
+  
+
+- Once the destination point is reached, backtrack from the destination to the source by choosing the neighbor with the lowest value at each step.
+- This path will represent a valid route from source to destination that avoids obstacles.
+  
+**Path Extraction:**  
+
+
+- The backtracing process yields the path from the source to the destination.
+- This path can be used as a guide for routing wires or interconnects in the VLSI layout.
+
+ **Limitations:**  
+ 
+
+- Lee's algorithm may not always find the shortest path, especially if there are multiple paths with the same wavefront values.
+- It does not consider congestion or wirelength minimization, which are essential factors in VLSI routing. More advanced routing algorithms are often used for those purposes.
+
+### Design Rule Check
+
+DRC is used to ensure that the physical layout of an integrated circuit (IC) adheres to the manufacturing and design rules specified by the semiconductor fabrication process. These rules are essential to ensure the manufacturability, functionality, and reliability of the IC.  
+
+ Semiconductor foundries or fabrication facilities specify a set of design rules that must be followed for a particular process technology. These rules include guidelines for minimum feature sizes, spacing between components, layer alignments, and other layout parameters.  
+
+ ![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/725c581a-7b50-4848-b0e3-fc6b2c7b0b4c)
+
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/87166e1b-f57c-4039-a90f-69b002b8051b)
+
+
+**DRC Checks**: The DRC tools perform various checks to ensure compliance with design rules, including:  
+
+
+- Spacing Rules: Ensuring that there is sufficient space between adjacent features to prevent short circuits or manufacturing defects.
+- Width Rules: Verifying that the width of conductive traces and other components meets the minimum requirements.
+- Alignment Rules: Checking that different layers of the IC align properly to prevent misalignment issues.
+- Enclosure Rules: Confirming that certain components are properly enclosed within designated regions.
+- Notch Rules: Ensuring that certain features have notches or cutouts as required.
+- Via Rules: Checking the size and placement of vias, which connect different layers in the IC.
+- Antenna Rules: Verifying that charge buildup and discharge during fabrication are within acceptable limits.
+
+### Power Distribution Network and routing
+
+It is an infrastructure that provides a stable and reliable supply of electrical power to all components within an integrated circuit (IC) or chip. Generating a proper PDN is essential to ensure that all devices on the chip receive the required voltage levels with minimal noise and voltage drops.  
+
+The first step in generating the PDN is to plan the power grid. This involves determining the overall power requirements of the chip, including the voltage levels (typically VDD and VSS or ground) and the current needs of different functional blocks.  
+
+Designers also need to consider the power delivery network's topology, including the placement of power rails and ground lines, as well as the arrangement of power domains and their connectivity.  
+
+To stabilize the voltage and reduce noise, decapacitors (decaps) are strategically placed within the chip. Decaps act as local energy reservoirs and help compensate for sudden changes in current demand, especially during switching events.  
+
+The selection and placement of decaps are based on the expected load and voltage fluctuations in different regions of the chip.  
+
+we can check whether PDN has been created or no by check the current def environment variable:  ```echo $::env(CURRENT_DEF)```  and then ``gen_pdn``  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/0031085e-8a0b-4894-9d04-c8cfdec5b79c)
+
+Once the PDN is generated, designers use analysis tools to simulate and verify its performance. They check for voltage drop, IR (voltage drop due to resistance), electromigration, and other power-related issues.  
+
+Optimization techniques such as buffer insertion, voltage islands, and voltage scaling may be applied to improve PDN performance.  
+
+After the chip's layout is complete, designers perform post-layout verification to confirm that the actual layout adheres to the PDN plan and design rules. Any discrepancies or issues are addressed.  
+
+Once the PDN is successfully generated and verified, and all design rules are met, the chip design is considered ready for tape-out. The final layout data is sent to a semiconductor foundry for fabrication.
+
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
