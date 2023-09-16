@@ -1107,6 +1107,27 @@ Below is the representation :
 
 **Clock Distribution:** As clock signals travel through PCB traces or cables, they can experience delays or reflections, leading to jitter.
 
+### Clock Tree Synthesis 
+
+The primary objective when constructing a clock tree is to ensure the reliable distribution of the clock signal to all elements in the design while minimizing clock skew. One commonly employed method in Clock Tree Synthesis (CTS) is the utilization of the H-tree architecture. If you've previously attempted to address slack issues in a design, you may have observed alterations in the netlist due to cell replacement techniques. Before proceeding with CTS using the TritonCTS tool, it's essential to consider these aspects.  
+
+Clock Tree Synthesis serves the crucial purpose of optimizing the clock signal's routing resources, reducing the area occupied by clock repeaters, and simultaneously adhering to various timing and power specifications. These specifications encompass reasonable clock skew, acceptable clock latency, controlled clock transition times, minimum pulse width, duty cycle adherence for all sequential elements in the design, and maintaining clock power within defined limits. Clock skew, in particular, pertains to the difference in clock arrival times between two registers.  
+
+Importance of Clock Tree Synthesis:  
+
+
+- In digital ICs, clock signals are fundamental for synchronizing the operation of various components, ensuring that data is sampled or changed at the correct times.
+
+- Properly synchronized clocks are crucial for avoiding setup and hold time violations, which can lead to incorrect data processing.
+
+- As ICs become more complex with millions or even billions of transistors, efficient and reliable clock distribution becomes increasingly challenging.
+
+Below is the representation:  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/821bf9ec-2c78-4f5a-95ee-ceef209c859e)
+
+Below shown cts buffering
+
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
 2. https://github.com/kunalg123/
