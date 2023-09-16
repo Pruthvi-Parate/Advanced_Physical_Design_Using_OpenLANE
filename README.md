@@ -36,9 +36,9 @@
  **Pre-Layout timing analysis and importance of good clock tree**  
  - [Convert grid info to track info](#convert-grid-info-to-track-info)
  - [Incorporating Custom Cells into OpenLANE Flow](#incorporating-custom-cells-into-openlane-flow)
- - [Introduction to Delay tables] (#introduction-to-delay-tables)
+ - [Introduction to Delay tables](#introduction-to-delay-tables)
  - [Custom Standard Cell Integration in the OpenLane Flow](#custom-standard-cell-integration-in-the-openlane-flow)
- - [Setup & Hold time]
+ - [Setup & Hold time](#setup--hold-time)
  - [Clock Jitter:](#clock-jitter)
  - [Clock Tree Synthesis](#clock-tree-synthesis)
  - [Crosstalk and clock net shielding](#crosstalk-and-clock-net-shielding)
