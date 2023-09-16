@@ -1188,6 +1188,28 @@ To initiate the Clock Tree Synthesis (CTS) process, please use the following com
 run_cts
 ```
 
+open openroad tool using following in openlane command prompt.  
+
+```
+openroad
+```
+![12](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/334fd5f3-db94-4484-a822-eb73d9ec0b73)
+
+Now give below commands one by one:  
+
+```
+read_lef ./designs/picorv32a/runs/RUN_2023.09.16_12.00.29/tmp/merged.nom.lef 
+read_def ./designs/picorv32a/runs/RUN_2023.09.16_12.00.29/results/cts/picorv32a.def
+write_db ./designs/picorv32a/picorv32a.db
+read_verilog ./designs/picorv32a/picorv32a_cts.v
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+read_sdc ./designs/picorv32a/runs/RUN_2023.09.16_12.00.29/results/cts/picorv32a.sdc
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+```
+
+![11](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/8f40f6de-4c0c-401d-986a-48969ab38278)
+
+
 # Day 5 Final steps for RTL2GDS
 
 ### Maze Routing and Lee's algorithm
