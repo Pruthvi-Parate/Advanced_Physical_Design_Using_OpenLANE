@@ -46,13 +46,15 @@
 
 **5. Day 5**  
 
-**Final steps for RTL2GDS**
-- [Maze Routing and Lee's algorithm](#maze-routing-and-lees-algorithm)
-- [Design Rule Check](#design-rule-check)
-- [Power Distribution Network and routing](#power-distribution-network-and-routing)
-- [Routing](#routing)
-- [TritonRoute Features](#tritonroute-features)
-	
+**Final steps for RTL2GDS**	
+	- [Maze Routing and Lee's algorithm](#maze-routing-and-lees-algorithm)
+	- [Design Rule Check](#design-rule-check)
+	- [Power Distribution Network and routing](#power-distribution-network-and-routing)
+	- [Routing](#routing)
+	- [TritonRoute Features](#tritonroute-features)
+
+- [References](#references)
+- 
  
 # Day_1 :Inception of open-source EDA, OpenLANE and Sky130 PDK  
 
@@ -1300,6 +1302,12 @@ It is the process of establishing interconnections between various components (s
  The tool takes into account the placement of standard cells, macro blocks, and other routing tracks as obstacles when determining the path of wires. It avoids collisions and ensures connectivity. TritonRoute employs routing algorithms to find the optimal paths for interconnections. The choice of algorithm can impact factors such as wirelength, signal delay, and power consumption.  
 
   TritonRoute-generated layouts are subject to physical verification steps to check for manufacturing-related issues, such as design rule violations and DRC errors.
+
+## Acknowledgement
+1.  Kunal Ghosh, VSD Corp. Pvt. Ltd.
+2.  Alwin shaju,Colleague,IIIT B
+3.  Bhargav DV, Colleague, IIIT B
+4.  Divyam Satle, Colleague, IIITB
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
