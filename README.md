@@ -1083,7 +1083,29 @@ Below is the representation:
 
 Lets understand in detail: Setup time is a crucial parameter, signifying the minimum duration preceding the active edge of the clock signal during which the data input must remain steady for accurate latching. Should this requirement be disregarded, it can lead to a perilous scenario known as a setup violation. In such instances, incorrect data may be captured, imperiling the integrity of the entire system.  
 
-Conversely, HOLD time represents another pivotal consideration, specifying the minimum interval post the clock's active edge within which the data input must stay unchanged. A violation in this context results in a hold violation, often culminating in erroneous data latching. It's vital to emphasize that both setup and hold times are exclusively measured concerning the clock's active edge. These stringent timing constraints form the cornerstone of dependable and error-free digital circuit operation, safeguarding against data corruption and ensuring reliable data capture.
+Conversely, HOLD time represents another pivotal consideration, specifying the minimum interval post the clock's active edge within which the data input must stay unchanged. A violation in this context results in a hold violation, often culminating in erroneous data latching. It's vital to emphasize that both setup and hold times are exclusively measured concerning the clock's active edge. These stringent timing constraints form the cornerstone of dependable and error-free digital circuit operation, safeguarding against data corruption and ensuring reliable data capture.  
+
+### Clock Jitter:  
+
+It can be defined as “deviation of a clock edge from its ideal location.” Clock jitter is typically caused by clock generator circuitry, noise, power supply variations, interference from nearby circuitry etc. Jitter is a contributing factor to the design margin specified for timing closure.  
+
+Below is the representation :  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/85c916e4-b62c-4249-9097-d26137fa8697)
+
+
+**Causes of Clock Jitter:**  
+
+ 
+**Noise:** Electronic circuits can introduce noise, which can cause fluctuations in the clock signal. This noise can come from various sources, such as power supply fluctuations or electromagnetic interference.  
+
+**Component Variations:** Variations in the characteristics of electronic components like resistors, capacitors, and transistors can lead to clock jitter.  
+
+**Temperature Fluctuations:** Changes in temperature can affect the performance of electronic components, leading to jitter.  
+
+**Phase-Locked Loops (PLLs):** PLLs are commonly used to generate stable clock signals, but they can introduce jitter if not designed or configured correctly.  
+
+**Clock Distribution:** As clock signals travel through PCB traces or cables, they can experience delays or reflections, leading to jitter.
 
 ## References
 1. https://github.com/The-OpenROAD-Project/OpenLane
