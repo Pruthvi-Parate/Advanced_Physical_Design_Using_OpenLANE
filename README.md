@@ -1092,7 +1092,8 @@ During the floorplan stage, we detected the inclusion of the custom cell.
 
 Now do ``run_placement``
 
-![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/38448d2b-2d94-4012-93f3-b8235deb5df4)
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/6c4de7d9-f7bb-46b3-a085-dca088dfc956)
+
 
 ### Setup & Hold time:  
 
