@@ -1092,7 +1092,12 @@ During the floorplan stage, we detected the inclusion of the custom cell.
 
 Now do ``run_placement``
 
-![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/fc34dd33-9358-4f4f-8dbd-d4633f25a960)
+![skyinv_vsd](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/2f30efae-932e-4e70-94a2-9ee2e4988136)
+
+Here below are other cells :  
+
+![image](https://github.com/Pruthvi-Parate/Advanced_Physical_Design_Using_OpenLANE/assets/72121158/21aa466f-1942-41a1-8d5d-0a2f9fd0795f)
+
 
 
 
